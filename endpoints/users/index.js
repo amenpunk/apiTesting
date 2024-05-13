@@ -2,7 +2,7 @@
 const handlers = ({ axios }) => ({
   get: async (_req, res) => {
     const { data } = await axios.get("https://jsonplaceholder.typicode.com/users/")
-    return res.json(data);
+    res.status(200).send(data);
   },
   post: async (req, res) => {
     const { body } = req;
