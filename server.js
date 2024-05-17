@@ -1,11 +1,11 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const { users } = require('./endpoints');
-const axios = require('axios');
+import express from 'express';
+import { urlencoded, json } from 'body-parser';
+import { users } from './endpoints';
+import axios from 'axios';
 
 const app = express();
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(urlencoded({ extended: true }));
+app.use(json());
 
 const usersHandlers = users({ axios });
 
