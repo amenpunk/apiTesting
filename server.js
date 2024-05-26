@@ -16,7 +16,7 @@ app.post('/', usersHandlers.post)
 app.put('/:id', usersHandlers.put)
 app.delete('/:id', usersHandlers.delete)
 
-// app.get('/post', postHandlers.get)
+app.get('/post', postHandlers.get)
 app.post('/post', authenticate, postHandlers.post)
 // app.put('/post/:id', postHandlers.put)
 // app.delete('/post/:id', postHandlers.delete)
